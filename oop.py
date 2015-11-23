@@ -1,0 +1,41 @@
+#oop:object oriented programming
+
+std1={'name':'Michael','score':98}
+std2={'name':'Bob','score':81}
+
+def print_score(std):
+	print std['name']+':'+str(std['score'])
+
+print_score(std1)
+print_score(std2)
+
+class student(object):
+	
+	def __init__(self,name,score):
+		self.name=name
+		self.score=score
+	def print_score(self):
+		print '%s:%s' %(self.name,self.score)
+	def get_grage(self):
+		if self.score>=90:
+			return 'A'
+		elif self.score>=60:
+			return 'B'
+		else :
+			return 'C'
+bart=student('Bart Simpson',59)
+lisa=student('Lisa Simpson',87)
+bart.print_score()
+lisa.print_score()
+
+class stu(object):
+	pass
+tom=stu()
+print tom
+print stu
+tom.name='Tom Simpson'
+print tom.name
+
+print bart.get_grage()
+print lisa.get_grage()
+
